@@ -32,4 +32,7 @@ jobs:
     # Build apk.
     - run: flutter build apk
 
-  #ios:
+  ios:
+    runs-on: macosx-latest
+    steps:
+    - uses: actions/checkout@v2
