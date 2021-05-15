@@ -18,14 +18,11 @@ jobs:
     - run: flutter pub get
     - run: flutter build apk
     - run: cd build/app/outputs && tree
-    #- name: Android Sign
-      #uses: Tlaster/android-sign@v1.2.2
-      #with:
-      #  releaseDirectory: app/build/outputs/apk/release
-      #   signingKeyBase64: ${{ secrets.SIGNING_KEY }}
-      #   output: build/release/signed
-      #   alias: ${{ secrets.ALIAS }}
-      #   keyStorePassword: ${{ secrets.KEY_STORE_PASSWORD }}
-      #   keyPassword: ${{ secrets.KEY_PASSWORD }}
-      # env:
-      #   BUILD_TOOLS_VERSION: "30.0.2"
+    - name: Upload binaries to release
+       uses: svenstaro/upload-release-action@v2
+       with:
+         repo_token: ${{ secrets.GITHUB_TOKEN }}
+         file: build/app/outputs/flutter-apk/*
+         tag: ${{ github.ref }}
+         overwrite: true
+         file_glob: true
