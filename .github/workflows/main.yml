@@ -4,21 +4,21 @@ on:
   push:
 
 jobs:
-  apk:
-    runs-on: ubuntu-latest
-    steps:
+  #apk:
+    #runs-on: ubuntu-latest
+    #steps:
 
-    - uses: actions/checkout@v2
-    - uses: actions/setup-java@v1
-      with:
-        java-version: '12.x'
+    #- uses: actions/checkout@v2
+    #- uses: actions/setup-java@v1
+    #  with:
+    #    java-version: '12.x'
 
-    - uses: subosito/flutter-action@v1
-      with:
-        channel: 'beta' # 'dev', 'alpha', default to: 'stable'
+    #- uses: subosito/flutter-action@v1
+    #  with:
+    #    channel: 'beta' # 'dev', 'alpha', default to: 'stable'
         # flutter-version: '1.12.x' # you can also specify exact version of flutter
 
-    - run: flutter pub get
+    #- run: flutter pub get
 
     # Check for any formatting issues in the code.
     #- run: flutter format --set-exit-if-changed .
@@ -30,7 +30,7 @@ jobs:
     #- run: flutter test
 
     # Build apk.
-    - run: flutter build apk
+    #- run: flutter build apk
 
   ios:
     runs-on: macos-latest
