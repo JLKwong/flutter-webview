@@ -4,7 +4,7 @@ on:
   push:
 
 jobs:
-  build:
+  apk:
     runs-on: ubuntu-latest
     steps:
 
@@ -31,3 +31,5 @@ jobs:
 
     # Build apk.
     - run: flutter build apk
+
+  #ios:
