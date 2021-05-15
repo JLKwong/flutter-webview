@@ -17,7 +17,8 @@ jobs:
         channel: 'beta' # 'dev', 'alpha', default to: 'stable'
     - run: flutter pub get
     - run: flutter build apk
-    - run: cd build/app/outputs | tree -d
+    - run: cd build/app/outputs
+    - run: tree -d
     #- name: Android Sign
       #uses: Tlaster/android-sign@v1.2.2
       #with:
