@@ -18,7 +18,7 @@ jobs:
     - run: flutter pub get
     - run: flutter build apk
     - run: cd build/app/outputs
-    - run: tree -d
+    - run: tree
     #- name: Android Sign
       #uses: Tlaster/android-sign@v1.2.2
       #with:
