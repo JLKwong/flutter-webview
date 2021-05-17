@@ -41,8 +41,7 @@ jobs:
         java-version: '12.x'
 
     - name: Select Xcode version
-        run: sudo xcode-select -s
-    '/Applications/Xcode_11.3.app/Contents/Developer'
+        run: sudo xcode-select -s '/Applications/Xcode_11.3.app/Contents/Developer'
     - name: Bundle install
         run: cd ./ios && bundle install
 
