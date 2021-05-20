@@ -43,6 +43,9 @@ jobs:
       with:
         channel: 'beta' # 'dev', 'alpha', default to: 'stable'
         flutter-version: '1.12.x' # you can also specify exact version of flutter
+        
+    - run: flutter channel dev
+    - run: flutter upgrade
 
     #- run: flutter pub get
 
