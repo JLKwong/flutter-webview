@@ -47,7 +47,7 @@ jobs:
     - run: flutter channel dev
     - run: flutter upgrade
 
-    #- run: flutter pub get
+    - run: flutter pub get
 
     # Check for any formatting issues in the code.
     #- run: flutter format --set-exit-if-changed .
