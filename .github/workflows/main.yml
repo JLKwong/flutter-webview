@@ -23,7 +23,7 @@ jobs:
 
     - run: flutter pub get
 
-    # Check for any formatting issues in the code.
+     #Check for any formatting issues in the code.
     #- run: flutter format --set-exit-if-changed .
 
      #Statically analyze the Dart code for any errors.
@@ -33,7 +33,7 @@ jobs:
     #- run: flutter test
 
      #Build apk.
-    #- run: flutter build apk
+    - run: flutter build apk
 
   #ios:
     #runs-on: macOS-latest
