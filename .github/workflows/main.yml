@@ -18,7 +18,7 @@ jobs:
         #channel: 'beta' # 'dev', 'alpha', default to: 'stable'
         flutter-version: '2.2.0' # you can also specify exact version of flutter
         
-    - run: flutter channel dev
+    - run: flutter channel stable
     #- run: flutter upgrade
 
     - run: flutter pub get
@@ -44,7 +44,7 @@ jobs:
         #channel: 'beta' # 'dev', 'alpha', default to: 'stable'
         flutter-version: '2.2.0' # you can also specify exact version of flutter
         
-    - run: flutter channel dev
+    - run: flutter channel stable
     #- run: flutter upgrade
 
     - run: flutter pub get
