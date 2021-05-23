@@ -39,6 +39,7 @@ jobs:
         channel: 'stable' # 'dev', 'alpha', default to: 'stable'
     - run: flutter pub get
     - run: flutter build ios --simulator
+    - run: brew install tree
     - run: tree
     #- name: Upload binaries to release
     #  uses: svenstaro/upload-release-action@v2
