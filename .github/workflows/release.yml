@@ -40,7 +40,7 @@ jobs:
     - run: flutter pub get
     - run: flutter build ios --simulator
     - run: brew install tree
-    - run: tree
+    - run: cd build && tree
     #- name: Upload binaries to release
     #  uses: svenstaro/upload-release-action@v2
     #  with:
