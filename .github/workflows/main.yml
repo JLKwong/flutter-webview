@@ -15,10 +15,10 @@ jobs:
 
     - uses: subosito/flutter-action@v1
       with:
-        #channel: 'beta' # 'dev', 'alpha', default to: 'stable'
+        channel: 'stable' # 'dev', 'alpha', default to: 'stable'
         flutter-version: '2.2.0' # you can also specify exact version of flutter
         
-    - run: flutter channel stable
+    #- run: flutter channel stable
     #- run: flutter upgrade
 
     - run: flutter pub get
@@ -41,10 +41,10 @@ jobs:
 
     - uses: subosito/flutter-action@v1
       with:
-        #channel: 'beta' # 'dev', 'alpha', default to: 'stable'
+        channel: 'stable' # 'dev', 'alpha', default to: 'stable'
         flutter-version: '2.2.0' # you can also specify exact version of flutter
         
-    - run: flutter channel stable
+    #- run: flutter channel stable
     #- run: flutter upgrade
 
     - run: flutter pub get
