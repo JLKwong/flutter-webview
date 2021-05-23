@@ -37,14 +37,14 @@ jobs:
     - uses: subosito/flutter-action@v1
       with:
         channel: 'stable' # 'dev', 'alpha', default to: 'stable'
-    #- run: flutter pub get
-    #- run: flutter build apk
-    #- run: cd build/app/outputs && tree
+    - run: flutter pub get
+    - run: flutter build apk
+    - run: cd build/app/outputs && tree
     #- name: Upload binaries to release
     #  uses: svenstaro/upload-release-action@v2
     #  with:
     #    repo_token: ${{ secrets.GITHUBTOKEN }}
-    #    file: build/app/outputs/flutter-apk/*
+    #    file: build/app/outputs/flutter-ios/*
     #    tag: ${{ github.ref }}
     #    overwrite: true
     #    file_glob: true
