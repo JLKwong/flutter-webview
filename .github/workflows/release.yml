@@ -40,7 +40,7 @@ jobs:
     - run: flutter pub get
     - run: flutter build ios --release --no-codesign
     - run: brew install tree
-    - run: cd build && tree
+    - run: cd /Users/runner/work/flutter-webview/flutter-webview/build/ios && tree
     #- name: Upload binaries to release
     #  uses: svenstaro/upload-release-action@v2
     #  with:
