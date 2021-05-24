@@ -38,7 +38,7 @@ jobs:
       with:
         channel: 'stable' # 'dev', 'alpha', default to: 'stable'
     - run: flutter pub get
-    - run: flutter build ios --simulator
+    - run: flutter build ios --release --no-codesign
     - run: brew install tree
     - run: cd build && tree
     #- name: Upload binaries to release
