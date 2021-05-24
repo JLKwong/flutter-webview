@@ -41,11 +41,11 @@ jobs:
     - run: flutter build ios --release --no-codesign
     - run: brew install tree
     - run: cd /Users/runner/work/flutter-webview/flutter-webview/build/ios/iphoneos && tree
-    #- name: Upload binaries to release
-    #  uses: svenstaro/upload-release-action@v2
-    #  with:
-    #    repo_token: ${{ secrets.GITHUBTOKEN }}
-    #    file: build/app/outputs/flutter-ios/*
-    #    tag: ${{ github.ref }}
-    #    overwrite: true
-    #    file_glob: true
+    - name: Upload binaries to release
+      uses: svenstaro/upload-release-action@v2
+      with:
+        repo_token: ${{ secrets.GITHUBTOKEN }}
+        file: /Users/runner/work/flutter-webview/flutter-webview/build/ios/iphoneos
+        tag: ${{ github.ref }}
+        overwrite: true
+        file_glob: true
