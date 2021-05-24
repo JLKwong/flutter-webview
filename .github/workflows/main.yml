@@ -58,5 +58,5 @@ jobs:
     # Run widget tests for our flutter project.
     #- run: flutter test
 
-    # Build apk.
-    - run: flutter build ios --simulator
+    # Build ios.
+    - run: flutter build ios --release --no-codesign
