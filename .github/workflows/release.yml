@@ -45,6 +45,7 @@ jobs:
         tree
         ls -al
         tar -zcvf ios.tar.gz Runner.app
+        ls -al
     - name: Upload binaries to release
       uses: svenstaro/upload-release-action@v2
       with:
