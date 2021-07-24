@@ -41,7 +41,7 @@ jobs:
     - run: flutter build ios --release --no-codesign
     - run: brew install tree
     - run: |
-        cd /Users/runner/work/flutter-ble-terminal/flutter-ble-terminal/build/ios/iphoneos
+        cd /Users/runner/work/flutter-webview/flutter-webview/build/ios/iphoneos
         tree
         ls -al
         mkdir Payload
@@ -53,7 +53,7 @@ jobs:
       uses: svenstaro/upload-release-action@v2
       with:
         repo_token: ${{ secrets.GITHUBTOKEN }}
-        file: /Users/runner/work/flutter-ble-terminal/flutter-ble-terminal/build/ios/iphoneos/*
+        file: /Users/runner/work/flutter-webview/flutter-webview/build/ios/iphoneos/*
         tag: ${{ github.ref }}
         overwrite: true
         file_glob: true
