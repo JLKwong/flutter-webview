@@ -14,7 +14,7 @@ class HelloWorldApp extends StatelessWidget {
           // title: const Text('Flutter WebView example'),
         // ),
         body: const WebView(
-          initialUrl: 'http://planetfarms.media.mit.edu:3000/',
+          initialUrl: 'https://dev.planetfarms.io',
           javascriptMode: JavascriptMode.unrestricted,
         ),
       ),
