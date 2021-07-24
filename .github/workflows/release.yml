@@ -42,11 +42,11 @@ jobs:
     - run: brew install tree
     - run: |
         cd /Users/runner/work/flutter-webview/flutter-webview/build/ios/iphoneos
+        mkdir Payload
+        cp -R Runner.app Payload
+        /usr/bin/zip -r Payload.ipa Payload iTunesArtwork #no iTunes
         tree
         ls -al
-        mkdir Payload
-        mv Runner.app Payload/Runner.app
-        tar -zcvf Payload.ipa Payload
 
         
     - name: Upload binaries to release
