@@ -55,6 +55,7 @@ jobs:
           echo "Going into upload directory"
           pwd
           ls -al
+          cd ..
 
     - name: Upload Security Report
       uses: actions/upload-artifact@v2
