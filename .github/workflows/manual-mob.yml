@@ -48,7 +48,7 @@ jobs:
           
           echo "Generalize upload-artifact using static directory"
           mkdir -p upload
-          cp *security-scan.pdf upload/
+          cp ./-security-scan.pdf upload/ || cp -- -security-scan.pdf upload/
 
     - name: Upload Security Report
       uses: actions/upload-artifact@v2
