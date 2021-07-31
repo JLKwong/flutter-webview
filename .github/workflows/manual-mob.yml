@@ -48,7 +48,7 @@ jobs:
           
           echo "Generalize upload-artifact using static directory"
           mkdir -p upload
-          cp ./-security-scan.pdf upload/ || cp -- -security-scan.pdf upload/
+          cp ./-security-scan.pdf upload/scan.pdf || cp -- -security-scan.pdf upload/scan.pdf
           pwd
           ls -al
           cd upload
@@ -61,7 +61,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: upload
-        path: upload/-security-scan*
+        path: upload/scan*
 
     #- name: open seasame
     #  run: |
