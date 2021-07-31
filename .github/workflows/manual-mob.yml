@@ -56,12 +56,20 @@ jobs:
           pwd
           ls -al
           cd ..
+          
+    - name: Where am I?
+      run: |
+          pwd
 
     - name: Upload Security Report
       uses: actions/upload-artifact@v2
       with:
         name: upload
         path: build/app/outputs/flutter-apk/upload/scan*
+
+    - name: Where am I?
+      run: |
+          pwd
 
     #- name: open seasame
     #  run: |
