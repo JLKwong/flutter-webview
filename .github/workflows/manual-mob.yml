@@ -48,14 +48,14 @@ jobs:
           
           echo "Generalize upload-artifact using static directory"
           mkdir -p upload
-          cp ./-security-scan.pdf upload/scan.pdf || cp -- -security-scan.pdf upload/scan.pdf
+          cp ./-security-scan.pdf upload/ || cp -- -security-scan.pdf upload/
           pwd
           ls -al
           cd upload
           echo "Going into upload directory"
           pwd
           ls -al
-          cd ..
+          cd /home/runner/work/flutter-webview/flutter-webview/build/app/outputs/flutter-apk/
           
     - name: Where am I?
       run: |
@@ -65,7 +65,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: upload
-        path: build/app/outputs/flutter-apk/upload/scan*
+        path: build/app/outputs/flutter-apk/upload/-security-scan.pdf
 
     - name: Where am I?
       run: |
