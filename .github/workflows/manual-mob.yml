@@ -31,6 +31,7 @@ jobs:
       run: |
           ApkDir="build/app/outputs/flutter-apk/"
           apk="app-release.apk"
+          UploadPath="$ApkDir-security-scan.pdf"
           docker pull opensecurity/mobile-security-framework-mobsf
           docker run -itd -p 8000:8000 opensecurity/mobile-security-framework-mobsf:latest 
           cd $ApkDir
@@ -50,4 +51,4 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: -security-scan.pdf
-        path: $ApkDir-security-scan.pdf
+        path: $UploadPath
