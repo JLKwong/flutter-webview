@@ -47,9 +47,8 @@ jobs:
           ls -al
           
           echo "Generalize upload-artifact using static directory"
-          cd $ApkDir
           mkdir -p upload
-          cp $ApkDir-security-scan.pdf $ApkDir/upload
+          cp -security-scan.pdf upload/
 
     - name: Upload Security Report
       uses: actions/upload-artifact@v2
