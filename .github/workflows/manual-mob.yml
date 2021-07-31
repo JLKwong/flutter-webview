@@ -48,4 +48,4 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: -security-scan.pdf
-        path: flutter-apk/-security-scan.pdf
+        path: build/app/outputs/flutter-apk/-security-scan.pdf
