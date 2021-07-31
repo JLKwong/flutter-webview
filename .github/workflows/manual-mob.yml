@@ -20,8 +20,8 @@ jobs:
         channel: 'stable' # 'dev', 'alpha', default to: 'stable'
         flutter-version: '2.2.0' # you can also specify exact version of flutter
         
-    - run: flutter channel stable
-    - run: flutter upgrade
+    #- run: flutter channel stable
+    #- run: flutter upgrade
 
     - run: flutter pub get
 
@@ -57,9 +57,9 @@ jobs:
           ls -al
           cd /home/runner/work/flutter-webview/flutter-webview/build/app/outputs/flutter-apk/
           
-    - name: Where am I?
-      run: |
-          pwd
+    #- name: Where am I?
+    #  run: |
+    #      pwd
 
     - name: Upload Security Report
       uses: actions/upload-artifact@v2
@@ -67,9 +67,9 @@ jobs:
         name: upload
         path: build/app/outputs/flutter-apk/upload/-security-scan.pdf
 
-    - name: Where am I?
-      run: |
-          pwd
+    #- name: Where am I?
+    #  run: |
+    #      pwd
 
     #- name: open seasame
     #  run: |
